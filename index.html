@@ -135,22 +135,35 @@
               <p>
               Project Motivation: The Motivation for this project was out of the interest to make a movable GUI application of a beloved game that I like to play. This was
               also interesting because in order to build a chess game you need to utilize the skills of OOP and understanding all the use cases
-              that are possible in the game.
+              that are possible in the game. Making a chess engine playable game seemed like a awesome opportunity to display my programming skills and demonstrate
+              a deep knowledge and understanding in the basic fundamentals of test-driven development. I also wanted to make a project that used
+              a movable inteface that is easy for the user to use and understand. I love the game of chess and I believe the project displays a 
+              an accurate and user friendly experience of the actual game.
               </p>
               <p>
               Functional Requirements: the requirements of the game were to make the game user friendly with a dragable game board that restricts illegal movement and 
-              highlights valid moves that the user can make. The project also plays by the exact rules of chess with check rules, end pond rules, and casteling.
+              highlights valid moves that the user can make. The project also plays by the exact rules of chess with check rules, end pond rules, and casteling. To make
+              the user experience seemless we also allow a valid move guide to the user that highlights the valid locations you can move a piece when you click on it. This 
+              also comes with a message display tab at the bottom of the project to show piece locations methods, turn status, and invalid move warnings.
               Having all these requirements is important to make sure that the game is functional and user-friendly.
               </p>
               <p>
               Project Design: The design of the project was followed using abstract classes and interfaces for the board and individual pieces that are connected to a GUI interface
               as the back end logic. Then separate classes for each piece type with the valid moves that they can make connected to a validmove() method that checks the board for all 
               valid locations that are then highlighted to the user for where they can move. Then under our board class we have all the internal board logic of a grid of where a piece can move
-              as well as the current position and if that move puts the piece in check or not. We decided to write the program in java and use javajx to make the GUI board for the project.
+              as well as the current position. We decided to write the program in java and use swift JPanel to make the GUI board for the project. We came up with this project structure as a team
+              since we believed separating the backend logic from the GUI and inheriting each piece from a Piece class and Location Class would allow us to reuse code and be very efficient. By separating our
+              backend logic we were able to adapt the GUI and fit it into our parameter so that it would work with any GUI framwork used as long as it had the valid parameters. I believe
+              due to this the documentation is easy to understand and track all our methods.
               </p>
               <p>
-              Implementation: I was responsible for building the GUI to be connected to our background knowledge and also created the test cases that we used to 
-              to test our conditional knowledge for valid piece locations as well as our piece taking and check implementation. 
+              Implementation: I was responsible for building the GUI to be connected to our background knowledge. This included creating a button mapping grid for the board that included 
+              keyboard listeners for a click grabbing a pieces location and then listening for a second click to parse the piece location and pass to our board movepiece() method. In doing 
+              so I also implemented the GUI highlighting all valid movements a piece could go by using the current location of the clicked on piece and grabbing all the valid positions then looping
+              through each piece and passing them through our isValid() method to only highlight valid moves. For the GUI design it required me to make a grid using JPanel and add this functionality to 
+              each panel of the board as well as address the correct Piece png images given the color and type specified in our board implementation. I was also responsible for our initial board 
+              and main method structure of using a 8x8 board of Piece types to keep track of all pieces currently on the board. I then started our movePiece() method implementation to move a single 
+              piece given input and built it to be passed to our Piece logic for a king, queen, rook, etc, later in the project.
               </p>
 
 
